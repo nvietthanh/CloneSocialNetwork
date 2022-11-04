@@ -1,0 +1,171 @@
+.home-three{
+    right: 0;
+    position: fixed;
+    overflow-y: scroll;
+    max-height: 100%;
+    width: 24%;
+}
+.home-three::-webkit-scrollbar{
+    background-color: #f0f2f5cc;
+    width: 8px;
+}
+.home-three:hover::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px
+}
+.home-three-content{
+    margin-top: 25px;
+    margin-left: 8px;
+    font-size: 1.0rem;
+    font-weight: 700;
+    color:rgba(0, 0, 0, 0.479);
+}
+
+.advertise{
+    padding: 0;
+    margin-top: 8px;
+    list-style: none;
+}
+.advertise-item{
+    position: relative;
+    padding: 8px;
+    border-radius: 10px;
+}
+.advertise-item:hover{
+    background-color: rgba(0, 0, 0, 0.07);
+}
+.advertise-wrap{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.advertise-image{
+    width: 132px;
+    border-radius: 10px;
+}
+.advertise-content{
+    margin: 0 40px 0 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color:rgba(0, 0, 0, 0.75);
+}
+.advertise-content-link{
+    display: block;
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+.advertise-item:nth-last-child(1)::before{
+    position: absolute;
+    width: calc(100% - 25px);
+    height: 1px;
+    left: 8px;
+    top: calc(100% + 8px);
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.home-birthday{
+    position: relative;
+    padding: 6px 8px;
+}
+.home-birthday:hover{
+    background-color: rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+}
+.home-birthday::before{
+    position: absolute;
+    width: calc(100% - 25px);
+    height: 1px;
+    left: 8px;
+    top: calc(100% + 8px);
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.birthday-link{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.birthday-image{
+    width: 28px;
+}
+.birthday-content{
+    width: 100%;
+    color:rgba(0, 0, 0, 0.75);
+    font-size: 0.9rem;
+    margin: 5px 60px 0px 15px;
+}
+.message-friend-list{
+    padding: 0;
+    list-style: none;
+    margin-top: 8px;
+}
+.message-friend-item{
+    position: relative;
+    padding: 8px;
+    cursor: pointer;
+}
+.message-friend-item:hover{
+    background-color: rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+}
+.message-friend-item:last-child::before{
+    position: absolute;
+    width: calc(100% - 25px);
+    height: 1px;
+    left: 8px;
+    top: calc(100% + 8px);
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.message-friend-wrap{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.message-friend-image{
+    width: 36px;
+    height: 36px;
+    position: relative;
+}
+.message-friend-image.user-online::after{
+    width: 7px;
+    height: 7px;
+}
+.message-friend-image img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.message-friend-name{
+    margin-left: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color:rgba(0, 0, 0, 0.7);
+}
+
+.message-group-list{
+    padding: 0;
+    list-style: none;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.message-group-item{
+    position: relative;
+    padding: 8px;
+    cursor: pointer;
+}
+.message-group-item:hover{
+    background-color: rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+}
+.group-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}

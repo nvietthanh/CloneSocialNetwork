@@ -1,0 +1,19 @@
+@media (max-width: 900px){
+    .container-header-infor{
+        text-align: center;
+        margin: 0;
+        display: block;
+    }
+    .container-header-profile{
+        display: block;
+    }
+    .container-header{
+        text-align: center;
+    }
+}
+
+@media (max-width: 1098px){
+    .container-header{
+        width: 100%;
+    }
+}

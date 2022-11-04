@@ -1,0 +1,462 @@
+.header{
+    width: 100%;
+    background-color: var(--white--color);
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(210, 206, 206);
+    position: fixed;
+    box-shadow: 0 1px 2px rgb(239, 234, 234);
+    z-index: 11;
+}
+.header-wrap{
+    width: 320px;
+    position: relative;
+    height: 56px;
+    display: flex;
+    align-items: center;
+}
+.header-logo .fa-facebook{
+    cursor: pointer;
+    color: var(--back--color);
+    margin-right: 8px;
+    margin-left: 15px;
+    font-size: 2.6rem;
+}
+.search{
+    flex: 1;
+    height: 38px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #f0f2f5;
+}
+.search-input-open{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.search-input{
+    flex: 1;
+    height: 38px;
+    font-size: 0.95rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: var(--border--color);
+    background-color: #f0f2f5;
+    z-index: 11;
+}
+.search-input:not(.hiden-on-pc){
+    padding-left: 18px;
+    width: 254px;
+}
+.search-input.search-checked{
+    padding-left: 18px;
+}
+.search-input-icon{
+    padding: 0 12px;
+    font-size: 1.0rem;
+    color: var(--border--color);
+}
+.search-input-back{
+    margin-left: 8px;
+    margin-right: 4px;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    font-size: 1.15rem;
+    z-index: 11;
+    color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.search-input-back:hover{
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+
+.search-history{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 320px;
+    height: 470px;
+    background-color: var(--white--color);
+    box-shadow: 0 1px 10px #777;
+    padding-top: 68px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index: 10;
+    animation: fadeIn ease-in-out 0.2s;
+}
+.search-checked{
+    display: none;
+}
+.search-history-wrap{
+    padding: 0 10px;
+    margin-bottom: 6px;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search-history-content{
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+}
+.search-history-setting{
+    padding: 0 8px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 0.9rem;
+    color: var(--back--color);
+    cursor: pointer;
+}
+.search-history-setting:hover{
+    background-color: rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+}
+.search-history-list{
+    padding: 0;
+    margin: 0 6px;
+    list-style: none;
+}
+.search-history-item{
+    padding: 0 8px;
+    height: 52px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.search-history-link{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-history-item:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.search-history-item-wrap{
+    display: flex;
+    align-items: center;
+}
+.search-history-item-image{
+    width: 35px;
+    border-radius: 50%;
+}
+.search-history-user-name{
+    margin-top: 2px;
+    margin-left: 12px;
+    margin-right: 25px;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.85);
+}
+.search-history-icon{
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 0.95rem;
+    border-radius: 50%;
+}
+.search-history-icon:hover{
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+
+.navbar{
+    height: 100%;
+    margin-right: 86px;
+    display: flex;
+    align-items: center;
+}
+.navbar-item{
+    width: 112px;
+    height: 50px;
+    text-align: center;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.navbar-item-hidden{
+    display: none;
+}
+.navbar-item-link{
+    position: relative;
+    margin: 0 4px;
+    text-decoration: none;
+}
+.navbar-icon-house,
+.navbar-icon-watch,
+.navbar-icon-market,
+.navbar-icon-store,
+.navbar-icon-games{
+    position: relative;
+}
+.navbar-icon-house::before{
+    position: absolute;
+    left: calc(-100% - 8px);
+    top: calc(100% + 16px);
+    width: 90px;
+    padding: 8px 0;
+    content: "Trang chủ";
+    display: none;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    color: var(--white--color);
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn ease-in .5s;
+    box-shadow: 0 1px 10px #777;
+}
+.navbar-icon-watch::before{
+    position: absolute;
+    left: calc(-100% - 8px);
+    top: calc(100% + 18px);
+    width: 80px;
+    padding: 8px 0;
+    content: "Watch";
+    display: none;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    color: var(--white--color);
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn ease-in .5s;
+    box-shadow: 0 1px 10px #777;
+}
+.navbar-icon-market::before{
+    position: absolute;
+    left: calc(-100% - 12px);
+    top: calc(100% + 18px);
+    width: 100px;
+    padding: 8px 0;
+    content: "Marketplace";
+    display: none;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    color: var(--white--color);
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn ease-in .5s;
+    box-shadow: 0 1px 10px #777;
+}
+.navbar-icon-group::before{
+    position: absolute;
+    left: calc(-100% + 6px);
+    top: calc(100% + 18px);
+    width: 70px;
+    padding: 8px 0;
+    content: "Nhóm";
+    display: none;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    color: var(--white--color);
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn ease-in .5s;
+    box-shadow: 0 1px 10px #777;
+}
+.navbar-icon-games::before{
+    position: absolute;
+    left: calc(-100% + 5px);
+    top: calc(100% + 18px);
+    width: 70px;
+    padding: 8px 0;
+    content: "Trò chơi";
+    display: none;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    color: var(--white--color);
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn ease-in .5s;
+    box-shadow: 0 1px 10px #777;
+}
+.navbar-icon-menu::before{
+    position: absolute;
+    left: calc(-100% + 4px);
+    top: calc(100% + 18px);
+    width: 50px;
+    padding: 8px 0;
+    content: "Khác";
+    display: none;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    color: var(--white--color);
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn ease-in .5s;
+    box-shadow: 0 1px 10px #777;
+}
+.navbar-item:hover .navbar-icon-house::before,
+.navbar-item:hover .navbar-icon-watch::before,
+.navbar-item:hover .navbar-icon-market::before,
+.navbar-item:hover .navbar-icon-group::before,
+.navbar-item:hover .navbar-icon-games::before,
+.navbar-item:hover .navbar-icon-menu::before{
+    display: block;
+}
+.navbar-item-icon{
+    color: var(--border--color);
+    font-size: 1.4rem;
+    line-height: 48px;
+}
+.navbar-item:hover:not(.navbar-item-check){
+    background-color: rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+}
+.navbar-item-check{
+    margin-top: 4px;
+    border-bottom: 4px solid var(--back--color);
+}
+.navbar-item-check .navbar-item-link .navbar-item-icon{
+    color: var(--back--color);
+}
+
+.header-profile{
+    height: 100%;
+    padding-right: 12px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.profile-avatar{
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.profile-item{
+    text-align: center;
+    background-color: var(--item--color);
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 5px;
+    z-index: 100;
+    opacity: 0.8;
+}
+.profile-item:active{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.profile-checked{
+    background-color: #c2d3f1;
+}
+.profile-item-icon{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+}
+.profile-item:hover{
+    opacity: 1;
+}
+.profile-item-hidden{
+    display: none;
+}
+.profile-item-extend::before{
+    position: absolute;
+    left: -10px;
+    top: calc(100% + 4px);
+    width: 70px;
+    height: 16px;
+    line-height: 16px;
+    padding: 8px 0;
+    content: "Tạo";
+    display: none;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    color: var(--white--color);
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn ease-in .5s;
+    box-shadow: 0 1px 10px #777;
+    z-index: 3;
+}
+.profile-item-menu::before{
+    position: absolute;
+    left: -15px;
+    top: calc(100% + 4px);
+    width: 70px;
+    height: 16px;
+    line-height: 16px;
+    padding: 8px 0;
+    content: "Menu";
+    display: none;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    color: var(--white--color);
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn ease-in .5s;
+    box-shadow: 0 1px 10px #777;
+    z-index: 3;
+}
+.profile-item-message::before{
+    position: absolute;
+    left: 30px;
+    top: calc(100% + 4px);
+    width: 90px;
+    height: 16px;
+    line-height: 16px;
+    padding: 8px 0;
+    content: "Messager";
+    display: none;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    color: var(--white--color);
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn ease-in .5s;
+    box-shadow: 0 1px 10px #777;
+    z-index: 3;
+}
+.profile-item-bell::before{
+    position: absolute;
+    left: 78px;
+    top: calc(100% + 4px);
+    width: 90px;
+    height: 16px;
+    line-height: 16px;
+    padding: 8px 0;
+    content: "Thông báo";
+    display: none;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    color: var(--white--color);
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn ease-in .5s;
+    box-shadow: 0 1px 10px #777;
+    z-index: 3;
+}
+.profile-item-infor::before{
+    position: absolute;
+    right: 0;
+    top: calc(100% + 4px);
+    width: 150px;
+    height: 16px;
+    line-height: 16px;
+    padding: 8px 0;
+    content: "Trang cá nhân của bạn";
+    display: none;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    color: var(--white--color);
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn ease-in .5s;
+    box-shadow: 0 1px 10px #777;
+    z-index: 3;
+}
+.profile-item:hover.profile-item-extend::before,
+.profile-item:hover.profile-item-menu::before,
+.profile-item:hover.profile-item-message::before,
+.profile-item:hover.profile-item-bell::before,
+.profile-item:hover.profile-item-avatar::before,
+.profile-item:hover.profile-item-infor::before{
+    display: block;
+}
+
+.navbar-item-select{
+    background-color: rgba(0, 0, 0, 0.07);
+    color: var(--back--color);
+}
+
